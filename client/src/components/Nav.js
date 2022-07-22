@@ -4,9 +4,11 @@ const nav = () => {
   return (
     <div className="flex flex-row items-center rounded-md mt-10 bg-white">
       <div className="">
-        <h1 className="p-4 text-3xl text-blue-600 sm:text-md">Book Store</h1>
+        <h1 className="p-4 text-3xl text-blue-600 sm:text-md font-bold">
+          Book Store
+        </h1>
       </div>
-      <div className="ml-auto mr-12 sm:mr-0">
+      <div className="ml-auto mr-10 sm:mr-4">
         <svg
           className="w-8 h-8 cursor-pointer"
           fill="none"

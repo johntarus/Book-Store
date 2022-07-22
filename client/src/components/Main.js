@@ -10,12 +10,12 @@ const Main = () => {
             src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             alt="placeholder"
           />
-          <div className="flex flex-col ml-6 sm:ml-4 justify-center">
+          <div className="flex flex-col ml-6 sm:ml-4 justify-center font-bold">
             <p>Atomic Habits</p>
             <p>James Clear</p>
           </div>
         </div>
-        <div className="mr-10">
+        <div className="mr-10 font-bold">
           <p>publisher</p>
           <p>publishDate</p>
         </div>
