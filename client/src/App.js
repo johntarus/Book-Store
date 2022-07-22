@@ -1,9 +1,12 @@
+import Nav from "./components/Nav";
 import "./App.css";
+import Main from "./components/Main";
 
 function App() {
   return (
-    <div className="text-center text-red-700">
-      <h3>hello react</h3>
+    <div className="mx-36">
+      <Nav />
+      <Main />
     </div>
   );
 }
