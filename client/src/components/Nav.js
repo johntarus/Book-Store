@@ -8,7 +8,7 @@ const nav = () => {
       </div>
       <div className="ml-auto mr-12">
         <svg
-          className="w-8 h-8"
+          className="w-8 h-8 cursor-pointer"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

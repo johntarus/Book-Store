@@ -24,6 +24,11 @@ const Main = () => {
           <p>Delete</p>
         </div>
       </div>
+      <div className="align-center mt-6">
+        {/* <button className="bg-blue-600 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          Add Book
+        </button> */}
+      </div>
     </div>
   );
 };
