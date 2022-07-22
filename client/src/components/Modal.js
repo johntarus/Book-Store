@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Modal() {
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <button
@@ -23,16 +23,12 @@ export default function Modal() {
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
-                  </button>
+                  ></button>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <label
-                    for="title"
+                    htmlFor="title"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Title
@@ -41,10 +37,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="title"
-                    required="true"
                   />
                   <label
-                    for="author"
+                    htmlFor="author"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Author
@@ -53,10 +48,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="author"
-                    required="true"
                   />
                   <label
-                    for="publisher"
+                    htmlFor="publisher"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Publisher
@@ -65,10 +59,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="publisher"
-                    required="true"
                   />
                   <label
-                    for="publishdate"
+                    htmlFor="publishdate"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     PublishDate
@@ -76,21 +69,15 @@ export default function Modal() {
                   <input
                     type="date"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    required="true"
                   />
 
                   <label
-                    for="title"
+                    htmlFor="title"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Cover Image
                   </label>
-                  <input
-                    type="file"
-                    accept="image, url"
-                    className=""
-                    required="true"
-                  />
+                  <input type="file" accept="image, url" className="" />
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">

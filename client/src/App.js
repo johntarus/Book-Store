@@ -5,7 +5,7 @@ import Modal from "./components/Modal";
 
 function App() {
   return (
-    <div className="mx-36">
+    <div className="mx-36 sm:mx-0">
       <Nav />
       <Main />
       <Modal />
