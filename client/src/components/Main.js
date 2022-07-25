@@ -10,7 +10,7 @@ const Main = () => {
   }, []);
   return (
     <>
-      {books.map((book, i) => {
+      {books.map((book) => {
         return (
           <div className="flex flex-row items-center justify-between text-md bg-[#E9E9ED] mb-4">
             <div className="flex">

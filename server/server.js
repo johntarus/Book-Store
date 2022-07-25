@@ -4,10 +4,12 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const booksRoutes = require("./routes/booksRoutes");
 const dotenv = require("dotenv").config();
+const cors = require("cors");
 
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cors());
 
 const port = process.env.PORT;
 const url = process.env.DB_URI;

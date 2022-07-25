@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Nav from "./components/Nav";
 import "./App.css";
 import Main from "./components/Main";
 import Modal from "./components/Modal";
-import axios from "axios";
 
 function App() {
   // const [title, setTitle] = useState("");
