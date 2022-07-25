@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function Modal() {
+export default function Modal({ books, setBooks }) {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -18,7 +18,7 @@ export default function Modal() {
         publishDate,
       })
       .then((response) => {
-        alert("Book created");
+        setBooks([...books, { title, author, publisher, publishDate }]);
       });
   };
   return (
@@ -120,7 +120,10 @@ export default function Modal() {
                   <button
                     className="bg-blue-600 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={createBook} //() => setShowModal(false)
+                    onClick={() => {
+                      createBook();
+                      setShowModal(false);
+                    }} //() => setShowModal(false)
                   >
                     Add
                   </button>

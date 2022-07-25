@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-const Main = () => {
-  const [books, setBooks] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:5000/books/").then((response) => {
-      setBooks(response.data);
-      console.log(response.data);
-    });
-  }, []);
+import React from "react";
+const Main = ({ books }) => {
+  // const [books, setBooks] = useState([]);
+  // useEffect(() => {
+  //   axios.get("http://localhost:5000/books/").then((response) => {
+  //     setBooks(response.data);
+  //     console.log(response.data);
+  //   });
+  // }, []);
   return (
     <>
       {books.map((book, i) => {
