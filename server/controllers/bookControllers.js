@@ -38,6 +38,7 @@ const createBook = async (req, res) => {
   } catch (err) {
     res.json({ message: err.message });
   }
+  console.log(book);
 };
 
 //updating book

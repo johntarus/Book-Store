@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const router = express.Router();
 const bookControllers = require("../controllers/bookControllers");
 
@@ -8,7 +9,7 @@ router.get("/", bookControllers.getAllBooks);
 //getting one book
 router.get("/:id", bookControllers.getSingleBook);
 //creating books
-router.post("/", bookControllers.createBook);
+router.post("/", cors(), bookControllers.createBook);
 //updating books
 router.patch("/:id", bookControllers.updateBook);
 //deleting books
