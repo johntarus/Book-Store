@@ -1,7 +1,26 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [publisher, setPublisher] = useState("");
+  const [publishDate, setPublishDate] = useState("");
+
+  //function to create book
+  const createBook = () => {
+    axios
+      .post("http://localhost:5000/books", {
+        title,
+        author,
+        publisher,
+        publishDate,
+      })
+      .then((response) => {
+        alert("Book created");
+      });
+  };
   return (
     <>
       <button
@@ -37,6 +56,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="title"
+                    onChange={(e) => {
+                      setTitle(e.target.value);
+                    }}
                   />
                   <label
                     htmlFor="author"
@@ -48,6 +70,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="author"
+                    onChange={(e) => {
+                      setAuthor(e.target.value);
+                    }}
                   />
                   <label
                     htmlFor="publisher"
@@ -59,6 +84,9 @@ export default function Modal() {
                     type="text"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="publisher"
+                    onChange={(e) => {
+                      setPublisher(e.target.value);
+                    }}
                   />
                   <label
                     htmlFor="publishdate"
@@ -69,6 +97,7 @@ export default function Modal() {
                   <input
                     type="date"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    onChange={(e) => setPublishDate(e.target.value)}
                   />
 
                   <label
@@ -91,7 +120,7 @@ export default function Modal() {
                   <button
                     className="bg-blue-600 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={createBook} //() => setShowModal(false)
                   >
                     Add
                   </button>

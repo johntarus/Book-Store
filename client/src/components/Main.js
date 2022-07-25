@@ -10,9 +10,12 @@ const Main = () => {
   }, []);
   return (
     <>
-      {books.map((book) => {
+      {books.map((book, i) => {
         return (
-          <div className="flex flex-row items-center justify-between text-md bg-[#E9E9ED] mb-4">
+          <div
+            key={i}
+            className="flex flex-row items-center justify-between text-md bg-[#E9E9ED] mb-4"
+          >
             <div className="flex">
               <img
                 className="h-24 w-24 rounded-lg"
